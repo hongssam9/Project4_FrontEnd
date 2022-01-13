@@ -1,14 +1,16 @@
 import './App.css';
 import { Button, Container } from 'react-bootstrap';
-import Home from "./components/Home.jsx"
-import Main from "./components/Main.jsx"
+import Login from "./components/Login.jsx";
+import Main from "./components/Main.jsx";
+import Splash from "./components/Splash.jsx";
 
 function App() {
   return (
     <div className="App">
       <Container fluid>
-        {/* <Home /> */}
-        <Main />
+        <Login />
+        {/* <Main /> */}
+        {/* <Splash /> */}
       </Container>
     </div>
   );
