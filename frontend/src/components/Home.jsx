@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
+import Image from 'react-bootstrap/Image'
+
 
 function Home(props) {
   return (
     <div>
-       <img src = " " alt="logo" className="p-3" fluid>
+       <img src = "https://clipart.info/images/minicovers/1516920570Instagram-logo-version-2.png" alt="logo" className="p-3" fluid>
         </img> 
 
       <Form className = "p-5">
@@ -21,8 +23,8 @@ function Home(props) {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
+        <Button variant="outline-primary" type="submit">
+          Login
         </Button>
       </Form>
     </div>
