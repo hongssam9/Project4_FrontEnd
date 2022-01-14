@@ -7,9 +7,9 @@ import Splash from "./components/Splash.jsx";
 function App() {
   return (
     <div className="App">
-      <Container fluid>
-        <Login />
-        {/* <Main /> */}
+      <Container >
+        {/* <Login /> */}
+        <Main />
         {/* <Splash /> */}
       </Container>
     </div>
