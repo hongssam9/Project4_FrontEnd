@@ -24,3 +24,4 @@ export default Splash;
 // Logo/Name
 // Login
 // Sign up
+// Needs background color/design

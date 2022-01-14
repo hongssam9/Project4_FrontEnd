@@ -8,37 +8,11 @@ import { BsFillSuitHeartFill } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BiCommentAdd } from "react-icons/bi";
 
+
 const Main = () => {
   return (
     <div>
-      <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className = "mb-5">
-        <Container fluid>
-          {/* move the logo to center later using CSS */}
-          <Navbar.Brand className="navbar-logo" href="#home">
-            React-Bootstrap
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      
       {/* ================================================================================================= */}
 
       <Carousel variant="light">
@@ -119,22 +93,23 @@ const Main = () => {
        */}
 
       {/* ================================================================================================= */}
+      <br/>
       <div className="btn-group" role="group" aria-label="Basic example">
         <div className="mx-5">
           {/* Like button */}
-          <Button variant="outline-*" type="button" value="Input" disabled>
+          <Button variant="outline-*" type="button" value="Input" onClick = {() => console.log("like")}>
             <BsFillSuitHeartFill size={25} />
           </Button>
         </div>
         <div>
           {/* Add Image button */}
-          <Button variant="outline-*" type="button" value="Input" disabled>
+          <Button variant="outline-*" type="button" value="Input" onClick = {() => console.log("post")}>
             <AiOutlinePlus size={25} />
           </Button>
         </div>
         <div className="mx-5">
           {/* Commetn Button */}
-          <Button variant="outline-*" type="button" value="Input" disabled>
+          <Button variant="outline-*" type="button" value="Input"  onClick = {() => console.log("comment")}>
             <BiCommentAdd size={25} />
           </Button>
         </div>
