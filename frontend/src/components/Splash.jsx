@@ -1,9 +1,10 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import "./Splash.css"
 
 function Splash(props) {
   return (
-    <div>
+    <div className="position-absolute top-50 start-50 translate-middle ">
       <img
         src="https://clipart.info/images/minicovers/1516920570Instagram-logo-version-2.png"
         alt="logo"
@@ -23,3 +24,4 @@ export default Splash;
 // Logo/Name
 // Login
 // Sign up
+// Needs background color/design
