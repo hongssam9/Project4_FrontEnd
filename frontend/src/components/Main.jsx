@@ -5,7 +5,7 @@ import imageHolder2 from "../images/img_holder2.png";
 import imageHolder3 from "../images/img_holder3.png";
 import { Button } from "react-bootstrap";
 import { BsFillSuitHeartFill } from "react-icons/bs";
-import { AiOutlinePlus } from "react-icons/ai";
+
 import { BiCommentAdd } from "react-icons/bi";
 
 
@@ -13,7 +13,7 @@ const Main = () => {
   return (
     <div>
       
-      {/* ================================================================================================= */}
+      {/* ===================================================================== */}
 
       <Carousel variant="light">
         <Carousel.Item>
@@ -92,19 +92,13 @@ const Main = () => {
       </div>
        */}
 
-      {/* ================================================================================================= */}
+      {/* ===================================================================== */}
       <br/>
-      <div className="btn-group" role="group" aria-label="Basic example">
+      <div className="btn-group" role="group" aria-label="Basic example" >
         <div className="mx-5">
           {/* Like button */}
           <Button variant="outline-*" type="button" value="Input" onClick = {() => console.log("like")}>
             <BsFillSuitHeartFill size={25} />
-          </Button>
-        </div>
-        <div>
-          {/* Add Image button */}
-          <Button variant="outline-*" type="button" value="Input" onClick = {() => console.log("post")}>
-            <AiOutlinePlus size={25} />
           </Button>
         </div>
         <div className="mx-5">
