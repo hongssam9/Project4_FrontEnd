@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
+import { Container,} from "react-bootstrap";
 
 const Userprof = () => {
-    return (
-        <div>
-            User prof
-        </div>
-    );
+  return (
+    <div>
+      <Container fluid>
+          
+      </Container>
+    </div>
+  );
 };
 
 export default Userprof;
