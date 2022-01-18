@@ -1,6 +1,6 @@
 import "./App.css";
-import { Route, Link } from "react-router-dom";
-import { Button, Container, Navbar, Nav } from "react-bootstrap";
+import { Route} from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import Login from "./components/Login.jsx";
 import Main from "./components/Main.jsx";
 import Splash from "./components/Splash.jsx";
@@ -52,9 +52,9 @@ function App() {
         <Navbar bg="dark" variant="dark" fixed = "bottom">
           <Container>
             <Nav className="me-auto">
-              <Nav.Link className = "mx-5" href="/"><RiHome3Fill /></Nav.Link>
+              <Nav.Link className = "mx-5" href="/"><RiHome3Fill size={25}/></Nav.Link>
                 {/* Add Image button */}
-              <Nav.Link className = "mx-4" href="#features"> <AiOutlinePlus /></Nav.Link>
+              <Nav.Link className = "mx-4" href="#features"> <AiOutlinePlus size={27}/></Nav.Link>
               <Nav.Link className = "mx-5" href="/Userprof">personal</Nav.Link>
             </Nav>
           </Container>
