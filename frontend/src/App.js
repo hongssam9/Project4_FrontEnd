@@ -3,12 +3,12 @@ import React from 'react';
 import { Route} from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import Login from "./components/Login.jsx";
-import Main from "./components/Main.jsx";
+import ImageFeed from "./components/ImageFeed.jsx";
 import Splash from "./components/Splash.jsx";
 import Settings from "./components/Settings.jsx";
 import Signup from "./components/Signup.jsx";
 import Userprof from "./components/Userprof.jsx";
-import Imagefeed from "./components/Imagefeed.jsx";
+
 import Account from "./components/Account.jsx";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -56,14 +56,14 @@ render() {
       </Navbar>
 
       <Container>
-        <Route exact path="/" component={Main} />
+        <Route exact path="/" component={ImageFeed} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Splash" component={Splash} />
         <Route exact path="/Settings" component={Settings} />
         <Route exact path="/Account" component={Account} />
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Userprof" component={Userprof} />
-        <Route exact path="/Imagefeed" component={Imagefeed} />
+       
         <Route exact path="/Userprof" component={Userprof} />
       </Container>
       
