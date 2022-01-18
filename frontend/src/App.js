@@ -1,21 +1,40 @@
 import "./App.css";
+import React from 'react';
 import { Route} from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import Login from "./components/Login.jsx";
-import Main from "./components/Main.jsx";
+import ImageFeed from "./components/ImageFeed.jsx";
 import Splash from "./components/Splash.jsx";
 import Settings from "./components/Settings.jsx";
 import Signup from "./components/Signup.jsx";
 import Userprof from "./components/Userprof.jsx";
-import Imagefeed from "./components/Imagefeed.jsx";
+
 import Account from "./components/Account.jsx";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
+import { BsFillPersonFill } from 'react-icons/bs'
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar
+class App extends React.Component {
+ 
+  state = {
+      details : [],
+  }
+  componentDidMount() {
+      let data ;
+      axios.get('http://shtsxh.herokuapp.com/')
+      .then(res => {
+          data = res.data;
+          this.setState({
+              details : data    
+          });
+      })
+      .catch(err => {})
+  }
+render() {
+  return(
+    <div className = "App">
+          <Navbar
         bg="dark"
         variant="dark"
         expand="lg"
@@ -24,7 +43,7 @@ function App() {
       >
         <Container fluid>
           <Navbar.Brand className="navbar-logo" href="/">
-            snapp.r
+            snapp.r social
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -37,14 +56,14 @@ function App() {
       </Navbar>
 
       <Container>
-        <Route exact path="/" component={Main} />
+        <Route exact path="/" component={ImageFeed} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Splash" component={Splash} />
         <Route exact path="/Settings" component={Settings} />
         <Route exact path="/Account" component={Account} />
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Userprof" component={Userprof} />
-        <Route exact path="/Imagefeed" component={Imagefeed} />
+       
         <Route exact path="/Userprof" component={Userprof} />
       </Container>
       
@@ -55,12 +74,15 @@ function App() {
               <Nav.Link className = "mx-5" href="/"><RiHome3Fill size={25}/></Nav.Link>
                 {/* Add Image button */}
               <Nav.Link className = "mx-4" href="#features"> <AiOutlinePlus size={27}/></Nav.Link>
-              <Nav.Link className = "mx-5" href="/Userprof">personal</Nav.Link>
+              {/*  link plus sign to 'add image' function */}
+              <Nav.Link className = "mx-5" href="/Userprof"><BsFillPersonFill size={27}/></Nav.Link>
             </Nav>
           </Container>
         </Navbar>
-      </Container>
+      </Container> 
     </div>
-  );
+    );
 }
+}
+
 export default App;
