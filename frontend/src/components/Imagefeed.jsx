@@ -3,16 +3,25 @@ import { Navbar, Container, Nav, NavDropdown, Carousel } from "react-bootstrap";
 import imageHolder from "../images/img_holder.png";
 import imageHolder2 from "../images/img_holder2.png";
 import imageHolder3 from "../images/img_holder3.png";
-import { Button } from "react-bootstrap";
-import { BsFillSuitHeartFill } from "react-icons/bs";
+import Feed from "./Feed";
+// import * as imageSrc from '../images';
 
-import { BiCommentAdd } from "react-icons/bi";
+const ImageFeed = () => {
+  /* 
+    1) read images from database. (in our case, the backend)
+    2) Grab username of user, attach to picture name
+    3) map the images
+    4) if multiple photos, attach carousel, else return single photo
+    5) attach the comment and like buttons
+  */
+  // function importAll(r) {
+  //   return r.keys().map(r);
+  // }
 
-const Main = () => {
+  // const images = importAll(require.context("./", false, /\.(png|jpe?g|svg)$/));
+
   return (
     <div>
-      {/* ===================================================================== */}
-
       <Carousel variant="light">
         <Carousel.Item>
           <img className="d-block w-100" src={imageHolder} alt="First slide" />
@@ -29,37 +38,12 @@ const Main = () => {
         </Carousel.Item>
       </Carousel>
 
-      {/* ===================================================================== */}
-      <br />
-      <div className="btn-group" role="group" aria-label="Basic example">
-        <div className="mx-5">
-          {/* Like button */}
-          <Button
-            variant="outline-*"
-            type="button"
-            value="Input"
-            onClick={() => console.log("like")}
-          >
-            <BsFillSuitHeartFill size={25} />
-          </Button>
-        </div>
-        <div className="mx-5">
-          {/* Commetn Button */}
-          <Button
-            variant="outline-*"
-            type="button"
-            value="Input"
-            onClick={() => console.log("comment")}
-          >
-            <BiCommentAdd size={25} />
-          </Button>
-        </div>
-      </div>
+      <Feed/>
     </div>
   );
 };
 
-export default Main;
+export default ImageFeed;
 
 // [ ] Nav bar w/ hamburger menu | w/logo
 // [ ] Stretch the narbar to the edges of the viewport. (possibly with the container/container fluid)
