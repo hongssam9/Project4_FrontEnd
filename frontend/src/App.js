@@ -88,3 +88,18 @@ render() {
 }
 
 export default App;
+
+/* 
+
+1/20/20
+
+UseState fetch stuff for the api stuff from backend
+hooks for likes
+change 1000 to 1k 1,000,000 to 1m
+
+
+
+extended
+have comments upload and save onto each picture
+
+ */
