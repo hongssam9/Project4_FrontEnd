@@ -8,7 +8,8 @@ import Splash from "./components/Splash.jsx";
 import Settings from "./components/Settings.jsx";
 import Signup from "./components/Signup.jsx";
 import Userprof from "./components/Userprof.jsx";
-
+import Like from "./components/Like.jsx";
+import Comment from "./components/Comment.jsx";
 import Account from "./components/Account.jsx";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -62,9 +63,10 @@ render() {
         <Route exact path="/Settings" component={Settings} />
         <Route exact path="/Account" component={Account} />
         <Route exact path="/Signup" component={Signup} />
+        <Route exact path="/Userprof" component={Userprof} /> 
         <Route exact path="/Userprof" component={Userprof} />
-       
-        <Route exact path="/Userprof" component={Userprof} />
+        <Route exact path ="/Like" component={Like} />
+        <Route exact path ="/Comment" component={Comment} />
       </Container>
       
       <Container fluid>
@@ -86,3 +88,18 @@ render() {
 }
 
 export default App;
+
+/* 
+
+1/20/20
+
+UseState fetch stuff for the api stuff from backend
+hooks for likes
+change 1000 to 1k 1,000,000 to 1m
+
+
+
+extended
+have comments upload and save onto each picture
+
+ */
