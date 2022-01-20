@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import "./Splash.css"
 
-function Splash(props) {
+function Splash() {
   return (
     <div className="position-absolute top-50 start-50 translate-middle ">
       <img

@@ -1,12 +1,41 @@
-import React from "react";
-import { Navbar, Container, Nav, NavDropdown, Carousel } from "react-bootstrap";
+import { React, useState, useEffect } from "react";
+import { Button, Form, Row, Col, Carousel } from "react-bootstrap";
 import imageHolder from "../images/img_holder.png";
 import imageHolder2 from "../images/img_holder2.png";
 import imageHolder3 from "../images/img_holder3.png";
-import Feed from "./Feed";
+import { BiCommentAdd } from "react-icons/bi";
+import Like from "./Like";
+import axios from 'axios'
 // import * as imageSrc from '../images';
-
 const ImageFeed = () => {
+
+
+const url = 'http://shtsxh.herokuapp.com/'
+const [Image, setImage] = useState([])
+
+/* const [Image, setImage] = useState([])
+  axios.get('http://shtsxh.herokuapp.com/')
+  .then(res =>  */ 
+    
+    useEffect(() => {
+      urlFetch();
+    }, []);
+  
+    const urlFetch = () => {
+      fetch(url)
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          throw res;
+        })
+        .then((json) => {
+          
+          setImage(json);
+        })
+        .catch((err) => console.log("something went wrong...", err));
+    };
+    console.log(Image) 
   /* 
     1) read images from database. (in our case, the backend)
     2) Grab username of user, attach to picture name
@@ -14,31 +43,48 @@ const ImageFeed = () => {
     4) if multiple photos, attach carousel, else return single photo
     5) attach the comment and like buttons
   */
-  // function importAll(r) {
-  //   return r.keys().map(r);
-  // }
-
-  // const images = importAll(require.context("./", false, /\.(png|jpe?g|svg)$/));
+   
+  let comment = 0;
 
   return (
     <div>
+      {/* ==================Images================== */}
       <Carousel variant="light">
-        <Carousel.Item>
-          <img className="d-block w-100" src={imageHolder} alt="First slide" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={imageHolder2}
-            alt="Second slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src={imageHolder3} alt="Third slide" />
-        </Carousel.Item>
+        
+        {Object.keys(Image).length ? Image.map(img =>
+       <Carousel.Item key={img.id}> 
+        <img className="d-block w-100" src={img.photo} alt="First post" />
+        </Carousel.Item>  
+      ) : (
+        "no images"
+      )}
+      
       </Carousel>
+      <div className="btn-group my-2" role="group" aria-label="Basic example">
+        {/* ==================Images/================== */}
+        {/* ==================Buttons================== */}
+        <Row>
+          <Col>
+            <Like />
+          </Col>
 
-      <Feed/>
+          <Col>
+            <div>
+              <Button
+                variant="outline-*"
+                type="button"
+                value="Input"
+                href="/Comment"
+                component={Comment}
+              >
+                <BiCommentAdd size={25} className="mx-3" />
+              </Button>
+            </div>
+            {comment}
+          </Col>
+        </Row>
+      </div>
+      {/* ==================Buttons/================== */}
     </div>
   );
 };

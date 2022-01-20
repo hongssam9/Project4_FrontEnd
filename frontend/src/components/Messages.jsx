@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Activity() {
+const Messages = () => {
     return (
         <div>
-            
+            Messages
         </div>
     );
-}
+};
 
-export default Activity;
+export default Messages;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Activity() {
+const About = () => {
     return (
         <div>
-            
+           About 
         </div>
     );
-}
+};
 
-export default Activity;
+export default About;

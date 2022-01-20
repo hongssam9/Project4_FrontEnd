@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Activity() {
+const UploadImages = () => {
+    
     return (
         <div>
-            
+        
         </div>
     );
-}
+};
 
-export default Activity;
+export default UploadImages;
