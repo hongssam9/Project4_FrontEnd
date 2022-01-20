@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 import { BsGoogle, BsApple } from "react-icons/bs";
 import { FcGoogle } from 'react-icons/fc'
 
-function Login(props) {
+function Login() {
   return (
     <div>
       <img
@@ -49,7 +49,7 @@ function Login(props) {
         <Col className = "mb-3">
           <Button variant='outline-*' className="text-muted">Forgot password?</Button>
         </Col>
-        <Button className="text-muted" variant='outline-*' >Sign up</Button>
+        <Button className="text-muted" variant='outline-*'>Sign up</Button>
       </Form>
     </div>
   );
