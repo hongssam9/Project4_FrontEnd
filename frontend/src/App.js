@@ -59,8 +59,8 @@ render() {
         <Route exact path ="/PersonalInfo" component={PersonalInfo} />
       </Container>
       
-      <Container fluid>
-        <Navbar bg="dark" variant="dark" fixed = "bottom">
+      <Container fluid className = "my-5">
+        <Navbar bg="dark" variant="dark" fixed = "bottom" >
           <Container>
             <Nav className="me-auto">
               <Nav.Link className = "mx-5" href="/"><RiHome3Fill size={25} /></Nav.Link>
