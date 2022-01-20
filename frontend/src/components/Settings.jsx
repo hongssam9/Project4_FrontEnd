@@ -35,14 +35,16 @@ const Settings = () => {
         </Button>
         <hr />
 
-
-        <Button variant="outline-*" href="/About"  className="text-start" component={About}>
+        <Button
+          variant="outline-*"
+          href="/About"
+          className="text-start"
+          component={About}
+        >
           <FiMessageSquare size={25} /> Messages
         </Button>
         <hr />
       </div>
-
-
     </div>
   );
 };
