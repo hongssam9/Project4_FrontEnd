@@ -11,7 +11,9 @@ import Userprof from "./components/Userprof.jsx";
 import Like from "./components/Like.jsx";
 import Comment from "./components/Comment.jsx";
 import Account from "./components/Account.jsx";
+import Messages from "./components/Messages";
 import UploadImages from "./components/UploadImages.jsx";
+import PersonalInfo from "./components/PersonalInfo.jsx";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from 'react-icons/bs'
@@ -46,14 +48,15 @@ render() {
         <Route exact path="/" component={ImageFeed} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Splash" component={Splash} />
+        <Route exact path="/UploadImages" component={UploadImages} />
         <Route exact path="/Settings" component={Settings} />
         <Route exact path="/Account" component={Account} />
         <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Userprof" component={Userprof} /> 
-        <Route exact path="/Userprof" component={Userprof} />
         <Route exact path ="/Like" component={Like} />
         <Route exact path ="/Comment" component={Comment} />
-
+        <Route exact path ="/Messages" component={Messages} />
+        <Route exact path ="/PersonalInfo" component={PersonalInfo} />
       </Container>
       
       <Container fluid>

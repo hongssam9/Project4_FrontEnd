@@ -16,7 +16,7 @@ const Settings = () => {
     <div className='navbar-div'>
       
       <Button variant='outline-*' href="/Account" component ={Account}>
-        <VscAccount size={25} /> Account
+        <VscAccount size={25} /> Account Info
       </Button>
       {/* Will take to account settings */}
      <Button variant='outline-*' href="/About" component ={About}>
@@ -25,7 +25,7 @@ const Settings = () => {
       <Button variant='outline-*' href="/About" component ={About}>
         <FcAbout size={25} /> Messages
       </Button>      {/* Will go to about page with info on the devs and copyright*/}
-      <h2>Dark Mode</h2>
+      <h2>Dark Mode (Coming Soon!)</h2>
       <label class="switch">
         <input type="checkbox" />
         <span className="slider round"></span>

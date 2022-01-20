@@ -53,24 +53,33 @@ class UploadImages extends Component {
 
   render() {
     return (
-    <div>
-              <form onSubmit={this.handleSubmit}>
+      <div>
+          
+        <form onSubmit={this.handleSubmit}>
           <p>
-            <input type="text" placeholder='Title' id='title' value={this.state.title} onChange={this.handleChange} required/>
+            <input
+              type="text"
+              placeholder="Caption"
+              id="content"
+              value={this.state.content}
+              onChange={this.handleChange}
+              required
+            />
           </p>
           <p>
-            <input type="text" placeholder='Content' id='content' value={this.state.content} onChange={this.handleChange} required/>
-
+            <input
+              type="file"
+              id="image"
+              accept="image/png, image/jpeg"
+              onChange={this.handleImageChange}
+              required
+            />
           </p>
-          <p>
-            <input type="file"
-                   id="image"
-                   accept="image/png, image/jpeg"  onChange={this.handleImageChange} required/>
-          </p>
-          <input type="submit"/>
+          {/* Submit button should push to the DB */}
+          <input type="submit" class="btn btn-info"/>
         </form>
-    </div>
-    )
+      </div>
+    );
   }
 }
 
