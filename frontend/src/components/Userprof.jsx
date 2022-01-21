@@ -34,17 +34,17 @@ const Userprof = () => {
           alt="profile pic"
         />
         <h1 className="py-2">John Smith</h1>
-        <p>Basic name basic guy what can i say</p>
+        <p>basic name basic guy what can i say</p>
         <div className="profile-stats">
           <ul>
             <li>
-              <span class="profile-stat-count">12</span> posts
+              <span class="profile-stat-count">12</span> <strong>posts</strong>
             </li>
             <li>
-              <span class="profile-stat-count">69</span> followers
+              <span class="profile-stat-count">69</span> <strong>followers</strong>
             </li>
             <li>
-              <span class="profile-stat-count">420</span> following
+              <span class="profile-stat-count">420</span> <strong>following</strong>
             </li>
           </ul>
         </div>

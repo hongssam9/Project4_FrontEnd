@@ -1,5 +1,6 @@
 
 import { React, useState, useEffect } from "react";
+
 import { Button, Navbar, Row, Col, Carousel, Container, Nav } from "react-bootstrap";
 import { BiCommentAdd } from "react-icons/bi";
 import Like from "./Like";
@@ -7,36 +8,34 @@ import axios from 'axios'
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
+
 // import * as imageSrc from '../images';
 const ImageFeed = () => {
+  const url = "http://shtsxh.herokuapp.com/";
+  const [Image, setImage] = useState([]);
 
-
-const url = 'http://shtsxh.herokuapp.com/'
-const [Image, setImage] = useState([])
-
-/* const [Image, setImage] = useState([])
+  /* const [Image, setImage] = useState([])
   axios.get('http://shtsxh.herokuapp.com/')
-  .then(res =>  */ 
-    
-    useEffect(() => {
-      urlFetch();
-    }, []);
-  
-    const urlFetch = () => {
-      fetch(url)
-        .then((res) => {
-          if (res.ok) {
-            return res.json();
-          }
-          throw res;
-        })
-        .then((json) => {
-          
-          setImage(json);
-        })
-        .catch((err) => console.log("something went wrong...", err));
-    };
-    console.log(Image) 
+  .then(res =>  */
+
+  useEffect(() => {
+    urlFetch();
+  }, []);
+
+  const urlFetch = () => {
+    fetch(url)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw res;
+      })
+      .then((json) => {
+        setImage(json);
+      })
+      .catch((err) => console.log("something went wrong...", err));
+  };
+  console.log(Image);
   /* 
     1) read images from database. (in our case, the backend)
     2) Grab username of user, attach to picture name
@@ -44,8 +43,6 @@ const [Image, setImage] = useState([])
     4) if multiple photos, attach carousel, else return single photo
     5) attach the comment and like buttons
   */
-   
-
 
   let comment = 0;
 
@@ -74,16 +71,39 @@ const [Image, setImage] = useState([])
       
       {/* ==================Images================== */}
       <Carousel variant="light">
-        
-        {Object.keys(Image).length ? Image.map(img =>
-       <Carousel.Item key={img.id}> 
-        <img className="d-block w-100" src={img.photo} alt="First post" />
-        </Carousel.Item>  
-      ) : (
-        "no images"
-      )}
-      
+        {Object.keys(Image).length
+          ? Image.map((img) => (
+              <Carousel.Item key={img.id}>
+                <img
+                  className="d-block w-100"
+                  src={img.image}
+                  alt="First post"
+                />
+              </Carousel.Item>
+            ))
+          : "no images"}
       </Carousel>
+
+      {/* Place single images here */}
+      <Container className="image-holder my-5">
+        <img
+          src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop"
+          class="gallery-image"
+          alt="trees"
+        />
+        
+        <img
+          src="https://images.assettype.com/freepressjournal/2021-08/918e9890-5b62-4ba8-98ad-49194d520c63/Untitled_design__26_.png?rect=0%2C0%2C3900%2C2048&w=1200&auto=format%2Ccompress&ogImage=true"
+          class="gallery-image"
+          alt="spiderman"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1502630859934-b3b41d18206c?w=500&h=500&fit=crop"
+          class="gallery-image"
+          alt=""
+        />
+      </Container>
+
       <div className="btn-group my-2" role="group" aria-label="Basic example">
         {/* ==================Images/================== */}
         {/* ==================Buttons================== */}
