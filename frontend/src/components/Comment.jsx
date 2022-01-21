@@ -7,11 +7,11 @@ const Comment = () => {
 
   return (
     <div>
-      <p>Hello world</p>
+      <h1 className="py-2">Comments</h1>
       <Form>
-        <Form.Label>Comments</Form.Label>
+        
         <Form.Control type="text" placeholder="Enter comment here" />
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="my-2">
           Comment
         </Button>
       </Form>

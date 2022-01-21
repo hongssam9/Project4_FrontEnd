@@ -10,7 +10,7 @@ const PersonalInfo = () => {
           src="https://randomuser.me/api/portraits/men/34.jpg"
           alt="profile pic"
         />
-        <h1 className="py-3">Steve Jobes</h1>
+        <h1 className="py-3">John Smith</h1>
         <h4 className="outline-primary text-start">Username:<em>  johntheguy_03</em></h4>
         <hr />
         <h4 className="text-start" >Email: jontron@hotmail.net</h4>
@@ -20,6 +20,7 @@ const PersonalInfo = () => {
         <h4 className="text-start">Gender: Male</h4>
         <hr />
         <h4 className="text-start">Birthday: April 20, 1889</h4>
+        <br />
         {/* This button should allow all fields to editable */}
         <Button className="my-2" variant="info">Edit Info</Button>
       </div>

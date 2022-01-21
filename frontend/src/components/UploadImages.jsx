@@ -2,9 +2,22 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class UploadImages extends Component {
+  componentDidMount() {
+    let data;
+    axios
+      .get("http://shtsxh.herokuapp.com/")
+      .then((res) => {
+        data = res.data;
+        this.setState({
+          details: data,
+        });
+      })
+      .catch((err) => {});
+  }
+
   state = {
     image: null,
-    description: [],
+    description: "",
   };
 
   handleChange = (e) => {
@@ -38,34 +51,11 @@ class UploadImages extends Component {
       .catch((err) => console.log(err));
   };
 
-  componentDidMount() {
-    let data;
-    axios
-      .get("http://shtsxh.herokuapp.com/")
-      .then((res) => {
-        data = res.data;
-        this.setState({
-          details: data,
-        });
-      })
-      .catch((err) => {});
-  }
-
   render() {
     return (
       <div>
-          
+        <h1 className="py-2 my-5">Upload Photo</h1>
         <form onSubmit={this.handleSubmit}>
-          <p>
-            <input
-              type="text"
-              placeholder="Caption"
-              id="content"
-              value={this.state.content}
-              onChange={this.handleChange}
-              required
-            />
-          </p>
           <p>
             <input
               type="file"
@@ -73,10 +63,21 @@ class UploadImages extends Component {
               accept="image/png, image/jpeg"
               onChange={this.handleImageChange}
               required
+              className="upload-image-btn"
+            />
+          </p>
+          <p>
+            <input
+              type="text"
+              placeholder="Description"
+              id="content"
+              value={this.state.content}
+              onChange={this.handleChange}
+              required
             />
           </p>
           {/* Submit button should push to the DB */}
-          <input type="submit" class="btn btn-info"/>
+          <input type="submit" class="btn btn-info" />
         </form>
       </div>
     );

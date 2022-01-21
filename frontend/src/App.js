@@ -18,6 +18,9 @@ import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from 'react-icons/bs'
 import axios from 'axios';
+import About from "./components/About";
+import ActivityHistory from "./components/ActivityHistory";
+import ForgotPass from "./components/ForgotPass";
 
 class App extends React.Component {
 render() {
@@ -47,28 +50,31 @@ render() {
       <Container>
         <Route exact path="/" component={ImageFeed} />
         <Route exact path="/Login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
         <Route exact path="/Splash" component={Splash} />
         <Route exact path="/UploadImages" component={UploadImages} />
         <Route exact path="/Settings" component={Settings} />
         <Route exact path="/Account" component={Account} />
-        <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Userprof" component={Userprof} /> 
         <Route exact path ="/Like" component={Like} />
         <Route exact path ="/Comment" component={Comment} />
         <Route exact path ="/Messages" component={Messages} />
         <Route exact path ="/PersonalInfo" component={PersonalInfo} />
+        <Route exact path ="/About" component={About} />
+        <Route exact path ="/ActivityHistory" component={ActivityHistory} />
+        <Route exact path ="/forgotpass" component={ForgotPass} />
       </Container>
       
-      <Container fluid className = "my-5">
+      <Container fluid className = "my-5 py-3">
         <Navbar bg="dark" variant="dark" fixed = "bottom" >
           <Container>
-            <Nav className="me-auto">
-              <Nav.Link className = "mx-5" href="/"><RiHome3Fill size={25} /></Nav.Link>
+            <Nav className="m-auto">
+              <Nav.Link className = "mx-5 nav-item" href="/"><RiHome3Fill size={25} /></Nav.Link>
            
-              <Button className = "mx-4" variant = "info" href="/UploadImages"> 
+              <Button className = "mx-4 nav-item" variant = "info" href="/UploadImages"> 
                 <AiOutlinePlus size={27}/> 
               </Button>
-              <Nav.Link className = "mx-5" href="/Userprof"><BsFillPersonFill size={27}/></Nav.Link>
+              <Nav.Link className = "mx-5 nav-item" href="/Userprof"><BsFillPersonFill size={27}/></Nav.Link>
             </Nav>
           </Container>
         </Navbar>
