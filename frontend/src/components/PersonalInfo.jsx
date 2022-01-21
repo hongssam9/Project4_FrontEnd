@@ -10,7 +10,7 @@ const PersonalInfo = () => {
           src="https://randomuser.me/api/portraits/men/34.jpg"
           alt="profile pic"
         />
-        <h1 className="py-3">Steve Jobes</h1>
+        <h1 className="py-3">John Smith</h1>
         <h4 className="outline-primary text-start">Username:<em>  johntheguy_03</em></h4>
         <hr />
         <h4 className="text-start" >Email: jontron@hotmail.net</h4>

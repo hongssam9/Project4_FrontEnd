@@ -20,6 +20,7 @@ import { BsFillPersonFill } from 'react-icons/bs'
 import axios from 'axios';
 import About from "./components/About";
 import ActivityHistory from "./components/ActivityHistory";
+import ForgotPass from "./components/ForgotPass";
 
 class App extends React.Component {
 render() {
@@ -61,6 +62,7 @@ render() {
         <Route exact path ="/PersonalInfo" component={PersonalInfo} />
         <Route exact path ="/About" component={About} />
         <Route exact path ="/ActivityHistory" component={ActivityHistory} />
+        <Route exact path ="/forgotpass" component={ForgotPass} />
       </Container>
       
       <Container fluid className = "my-5 py-3">

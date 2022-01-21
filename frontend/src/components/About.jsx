@@ -16,10 +16,10 @@ const About = () => {
         <Button target="_blank" href="" variant="outline-*"><BsGlobe size={35} className="m-1"/></Button>
         <hr />
         <h3>Samuel Hong</h3> 
-        <Button target="_blank" href="" variant="outline-*"> <BsGithub size={35} className="m-1"/></Button>
-        <Button target="_blank" href="" variant="outline-*"><BsLinkedin size={35} className="m-1"/></Button>
-        <Button target="_blank" href="" variant="outline-*"><BsInstagram size={35} className="m-1"/></Button>
-        <Button target="_blank" href="" variant="outline-*"><BsGlobe size={35} className="m-1"/></Button>
+        <Button target="_blank" href="https://github.com/hongssam9" variant="outline-*"> <BsGithub size={35} className="m-1"/></Button>
+        <Button target="_blank" href="https://www.linkedin.com/in/hongssam9/" variant="outline-*"><BsLinkedin size={35} className="m-1"/></Button>
+        <Button target="_blank" href="https://www.instagram.com/hong_ssam9/" variant="outline-*"><BsInstagram size={35} className="m-1"/></Button>
+        <Button target="_blank" href="https://www.thehongssam.com/" variant="outline-*"><BsGlobe size={35} className="m-1"/></Button>
         <hr />
         <h3>Xuyen Hoang</h3> 
         <Button target="_blank" href="" variant="outline-*"> <BsGithub size={35} className="m-1"/></Button>

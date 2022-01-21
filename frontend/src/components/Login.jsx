@@ -47,7 +47,7 @@ function Login() {
           </Row>
         </Col>
         <Col className = "mb-3">
-          <Button variant='outline-*' className="text-muted">Forgot password?</Button>
+          <Button variant='outline-*' className="text-muted" href="/forgotpass">Forgot password?</Button>
         </Col>
         <Button className="text-muted" variant='outline-*' href="/signup">Sign up</Button>
       </Form>

@@ -8,12 +8,18 @@ import About from "./About";
 import Messages from "./Messages";
 import { FiMessageSquare } from "react-icons/fi";
 import { BsInfoSquare } from "react-icons/bs";
+import Login from "./Login";
+import { BiDoorOpen } from "react-icons/bi";
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+
 
 const Settings = () => {
   // Might need to use <Col> to create a single veritcal stack of menu items
 
   return (
     <div className="container-fluid">
+      {/* back arrow */}
+      <Button variant="outline-*"><AiOutlineArrowLeft size={25} /></Button>
       <h1 className="py-2" >Settings</h1>
       <div class="d-flex flex-column">
         <Button
@@ -45,6 +51,14 @@ const Settings = () => {
           <FiMessageSquare size={25} /> Messages
         </Button>
         <hr />
+        <Button
+          variant="outline-*"
+          href="/Login"
+          className="text-start"
+          component={Login}
+        >
+          <BiDoorOpen size={25} /> Sign Out
+        </Button>
       </div>
     </div>
   );
