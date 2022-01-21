@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
+import { Container } from "react-bootstrap";
 
 const Messages = () => {
-    return (
-        <div>
-            Work in Progress! Go get a life and talk to people in person
-        </div>
-    );
+  return (
+    <div>
+      <Container fluid>
+        <h1>Messages</h1>
+        <hr />
+        <h3>Coming Soon!</h3>
+      </Container>
+    </div>
+  );
 };
 
 export default Messages;

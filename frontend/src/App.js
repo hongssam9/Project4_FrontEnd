@@ -18,6 +18,8 @@ import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from 'react-icons/bs'
 import axios from 'axios';
+import About from "./components/About";
+import ActivityHistory from "./components/ActivityHistory";
 
 class App extends React.Component {
 render() {
@@ -57,6 +59,8 @@ render() {
         <Route exact path ="/Comment" component={Comment} />
         <Route exact path ="/Messages" component={Messages} />
         <Route exact path ="/PersonalInfo" component={PersonalInfo} />
+        <Route exact path ="/About" component={About} />
+        <Route exact path ="/ActivityHistory" component={ActivityHistory} />
       </Container>
       
       <Container fluid className = "my-5 py-3">

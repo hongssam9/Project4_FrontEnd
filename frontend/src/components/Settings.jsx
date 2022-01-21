@@ -38,9 +38,9 @@ const Settings = () => {
 
         <Button
           variant="outline-*"
-          href="/About"
+          href="/Messages"
           className="text-start"
-          component={About}
+          component={Messages}
         >
           <FiMessageSquare size={25} /> Messages
         </Button>
