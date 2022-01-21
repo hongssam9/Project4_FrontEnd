@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link, Route , useHistory} from "react-router-dom";
 import { FcAbout } from "react-icons/fc";
 import { VscAccount } from "react-icons/vsc";
 import { Button, Container, Col } from "react-bootstrap";
@@ -13,13 +13,23 @@ import { BiDoorOpen } from "react-icons/bi";
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 
+
+
+
+
 const Settings = () => {
   // Might need to use <Col> to create a single veritcal stack of menu items
+
+
+
+
+
+  
 
   return (
     <div className="container-fluid">
       {/* back arrow */}
-      <Button variant="outline-*"><AiOutlineArrowLeft size={25} /></Button>
+      <Button variant="outline-*" href=""><AiOutlineArrowLeft size={25} /></Button>
       <h1 className="py-2" >Settings</h1>
       <div class="d-flex flex-column">
         <Button

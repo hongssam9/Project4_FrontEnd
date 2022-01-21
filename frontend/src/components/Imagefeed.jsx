@@ -44,6 +44,8 @@ const [Image, setImage] = useState([])
     5) attach the comment and like buttons
   */
    
+
+
   let comment = 0;
 
   return (
