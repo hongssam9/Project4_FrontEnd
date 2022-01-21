@@ -14,6 +14,7 @@ const Settings = () => {
 
   return (
     <div className="container-fluid">
+      <h1 className="py-2" >Settings</h1>
       <div class="d-flex flex-column">
         <Button
           variant="outline-*"

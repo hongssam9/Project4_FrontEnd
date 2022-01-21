@@ -20,6 +20,7 @@ const PersonalInfo = () => {
         <h4 className="text-start">Gender: Male</h4>
         <hr />
         <h4 className="text-start">Birthday: April 20, 1889</h4>
+        <br />
         {/* This button should allow all fields to editable */}
         <Button className="my-2" variant="info">Edit Info</Button>
       </div>

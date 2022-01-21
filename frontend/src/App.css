@@ -126,3 +126,13 @@ input:checked + .slider:before {
 h4 {
   display: inline-block;
 }
+
+.upload-image-btn {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-left: 200px;
+  margin-right: auto;
+}
