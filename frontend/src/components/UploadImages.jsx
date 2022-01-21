@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import { Navbar, Container, Nav } from "react-bootstrap"
 class UploadImages extends Component {
   componentDidMount() {
     let data;
@@ -54,6 +54,27 @@ class UploadImages extends Component {
   render() {
     return (
       <div>
+        <Navbar
+          bg="dark"
+          variant="dark"
+          expand="lg"
+          sticky="top"
+          className="mb-5"
+        >
+          <Container fluid>
+            <Navbar.Brand className="navbar-logo" href="/">
+              snapp.r social
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/Settings">Settings</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
         <h1 className="py-2 my-5">Upload Photo</h1>
         <form onSubmit={this.handleSubmit}>
           <p>
