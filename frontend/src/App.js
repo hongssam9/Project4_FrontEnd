@@ -47,11 +47,11 @@ render() {
       <Container>
         <Route exact path="/" component={ImageFeed} />
         <Route exact path="/Login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
         <Route exact path="/Splash" component={Splash} />
         <Route exact path="/UploadImages" component={UploadImages} />
         <Route exact path="/Settings" component={Settings} />
         <Route exact path="/Account" component={Account} />
-        <Route exact path="/Signup" component={Signup} />
         <Route exact path="/Userprof" component={Userprof} /> 
         <Route exact path ="/Like" component={Like} />
         <Route exact path ="/Comment" component={Comment} />

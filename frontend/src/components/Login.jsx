@@ -7,13 +7,13 @@ import { FcGoogle } from 'react-icons/fc'
 function Login() {
   return (
     <div>
-      <img
+      {/* <img
         src="https://clipart.info/images/minicovers/1516920570Instagram-logo-version-2.png"
         alt="logo"
         className="p-5"
         fluid
-      ></img>
-
+      ></img> */}
+      <h1>snapp.r social</h1>
       <Form className="p-5">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>
@@ -49,7 +49,7 @@ function Login() {
         <Col className = "mb-3">
           <Button variant='outline-*' className="text-muted">Forgot password?</Button>
         </Col>
-        <Button className="text-muted" variant='outline-*'>Sign up</Button>
+        <Button className="text-muted" variant='outline-*' href="/signup">Sign up</Button>
       </Form>
     </div>
   );
