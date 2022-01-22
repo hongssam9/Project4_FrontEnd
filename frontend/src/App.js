@@ -14,14 +14,10 @@ import Account from "./components/Account.jsx";
 import Messages from "./components/Messages";
 import UploadImages from "./components/UploadImages.jsx";
 import PersonalInfo from "./components/PersonalInfo.jsx";
-import { RiHome3Fill } from "react-icons/ri";
-import { AiOutlinePlus } from "react-icons/ai";
-import { BsFillPersonFill } from "react-icons/bs";
-import axios from "axios";
 import About from "./components/About";
 import ActivityHistory from "./components/ActivityHistory";
 import ForgotPass from "./components/ForgotPass";
-
+import Terms from "./components/Terms";
 class App extends React.Component {
   render() {
     return (
@@ -65,7 +61,8 @@ class App extends React.Component {
           <Route exact path="/PersonalInfo" component={PersonalInfo} />
           <Route exact path="/About" component={About} />
           <Route exact path="/ActivityHistory" component={ActivityHistory} />
-          <Route exact path="/forgotpass" component={ForgotPass} />
+          <Route exact path="/ForgotPass" component={ForgotPass} />
+          <Route exact path="/Terms" component={Terms} />
         </Container>
 
         {/* <Container fluid className="my-5 py-3">

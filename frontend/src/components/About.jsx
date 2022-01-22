@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Link } from "react-router-dom"
 import { Container, Button, Navbar, Nav } from "react-bootstrap";
 import {
   BsGithub,
@@ -38,15 +38,24 @@ const About = () => {
         </Container>
       </Navbar>
       <Container fluid>
-        <h1 className="mb-3">About</h1>
-        <img
+      <img
           src= {logo}
           alt="logo"
           id = "logo"
          
           fluid
         />
-        <h3 className = 'my-3'>SoCap Created by</h3>
+        <h1 className="my-3">Hello!</h1>
+        <h4>
+      Do you have anything you're proud of and want to share with your friends? Welcome to SoCap, Software Caption, a simple yet interactive app that will allow you, the user, to show off your best work! 
+      </h4>
+      <p>
+       Whether you're an engineer, musician, cook, photgrapher, etc., post up your work to get feedback, suggestions, inquries, and compliments! 
+      </p>
+      <nav>
+        <Link to="/Terms">Terms of Use</Link>
+      </nav> 
+        <h3 className = 'mt-5'>SoCap Created by</h3>
         <hr />
         <h3>Tad Smith</h3>
         <Button
@@ -122,6 +131,7 @@ const About = () => {
         </Button>
         <hr />
       </Container>
+      <footer><p>app design / logo &copy; 2021 Lonely Food, LLC</p></footer>
       <Container fluid className="my-5 py-3">
         <Navbar bg="dark" variant="dark" fixed="bottom">
           <Container>
