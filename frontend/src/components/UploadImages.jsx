@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Navbar, Container, Nav } from "react-bootstrap"
+import { Navbar, Container, Nav } from "react-bootstrap";
+import "./UploadImages.css"
 class UploadImages extends Component {
   componentDidMount() {
     let data;
@@ -60,10 +61,11 @@ class UploadImages extends Component {
           expand="lg"
           sticky="top"
           className="mb-5"
+          id="navbar"
         >
           <Container fluid>
             <Navbar.Brand className="navbar-logo" href="/">
-              snapp.r social
+              SoCap
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -75,9 +77,9 @@ class UploadImages extends Component {
           </Container>
         </Navbar>
 
-        <h1 className="py-2 my-5">Upload Photo</h1>
+        <h1 className="my-5">Upload Photo</h1>
         <form onSubmit={this.handleSubmit}>
-          <p>
+          <div className="my-4">
             <input
               type="file"
               id="image"
@@ -86,17 +88,20 @@ class UploadImages extends Component {
               required
               className="upload-image-btn"
             />
-          </p>
-          <p>
-            <input
+          </div>
+
+          <div class="form-floating my-3">
+            <textarea
+              class="form-control"
               type="text"
               placeholder="Description"
               id="content"
               value={this.state.content}
               onChange={this.handleChange}
               required
-            />
-          </p>
+            ></textarea>
+            <label for="floatingTextarea2">Description</label>
+          </div>
           {/* Submit button should push to the DB */}
           <input type="submit" class="btn btn-info" />
         </form>

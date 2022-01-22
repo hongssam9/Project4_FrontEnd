@@ -4,8 +4,10 @@ import PersonalInfo from "./PersonalInfo";
 import ActivityHistory from "./ActivityHistory";
 import { VscAccount } from "react-icons/vsc";
 import { RiHistoryFill, RiHome3Fill } from "react-icons/ri";
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus} from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
+import "./Navbar.css"
+import {MdOutlineArrowBackIosNew} from "react-icons/md"
 
 function Account() {
   return (
@@ -16,11 +18,12 @@ function Account() {
         expand="lg"
         sticky="top"
         className="mb-5"
+        id="navbar"
       >
         <Container fluid>
-          <Navbar.Brand className="navbar-logo" href="/">
-            snapp.r social
-          </Navbar.Brand>
+        <a className="nav-link text-secondary" href="./Settings">
+            <MdOutlineArrowBackIosNew size={20} />
+          </a>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -32,7 +35,7 @@ function Account() {
       </Navbar>
 
       <div className="container-fluid">
-        <h1 className="py-2">Account Settings</h1>
+        <h1 className="my-4">Account Settings</h1>
         <div class="d-flex flex-column">
           <Button
             variant="outline-*"

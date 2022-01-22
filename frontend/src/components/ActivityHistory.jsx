@@ -3,6 +3,9 @@ import { Container, Button, Navbar, Nav } from "react-bootstrap";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
+import "./Navbar.css"
+import { MdOutlineArrowBackIosNew } from 'react-icons/md'
+
 const ActivityHistory = () => {
   return (
     <div>
@@ -12,11 +15,12 @@ const ActivityHistory = () => {
         expand="lg"
         sticky="top"
         className="mb-5"
+        id="navbar"
       >
         <Container fluid>
-          <Navbar.Brand className="navbar-logo" href="/">
-            snapp.r social
-          </Navbar.Brand>
+        <a className = "nav-link text-secondary" href="./Account" >
+                    <MdOutlineArrowBackIosNew size={20} />
+                    </a>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

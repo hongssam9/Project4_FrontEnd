@@ -1,10 +1,18 @@
-
 import { React, useState, useEffect } from "react";
+import "./Navbar.css"
 
-import { Button, Navbar, Row, Col, Carousel, Container, Nav } from "react-bootstrap";
+import {
+  Button,
+  Navbar,
+  Row,
+  Col,
+  Carousel,
+  Container,
+  Nav,
+} from "react-bootstrap";
 import { BiCommentAdd } from "react-icons/bi";
 import Like from "./Like";
-import axios from 'axios'
+import axios from "axios";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
@@ -48,27 +56,28 @@ const ImageFeed = () => {
 
   return (
     <div>
-    
      <Navbar
-          bg="dark"
-          variant="dark"
-          sticky="top"
-          className="mb-5"
-        >
-          <Container fluid>
-            <Navbar.Brand className="navbar-logo" href="/">
-              snapp.r social
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/Settings">Settings</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar> 
-      
+        bg="dark"
+        variant="dark"
+        expand="lg"
+        sticky="top"
+        className="mb-5"
+        id="navbar"
+      >
+        <Container fluid>
+          <Navbar.Brand className="navbar-logo" href="/">
+            SoCap
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/Settings">Settings</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
       {/* ==================Images================== */}
       <Carousel variant="light">
         {Object.keys(Image).length
@@ -85,7 +94,7 @@ const ImageFeed = () => {
       </Carousel>
 
       {/* Place single images here */}
-      <Container className="image-holder my-5">
+      {/* <Container className="image-holder my-5">
         <img
           src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop"
           class="gallery-image"
@@ -102,7 +111,7 @@ const ImageFeed = () => {
           class="gallery-image"
           alt=""
         />
-      </Container>
+      </Container> */}
 
       <div className="btn-group my-2" role="group" aria-label="Basic example">
         {/* ==================Images/================== */}
@@ -128,29 +137,31 @@ const ImageFeed = () => {
           </Col>
         </Row>
       </div>
-      {/* ==================Buttons/================== */}
-      <Container fluid className="my-5 py-3">
-          <Navbar bg="dark" variant="dark" fixed="bottom">
-            <Container>
-              <Nav className="m-auto">
-                <Nav.Link className="mx-5 nav-item" href="/">
-                  <RiHome3Fill size={25} />
-                </Nav.Link>
 
-                <Button
-                  className="mx-4 nav-item"
-                  variant="info"
-                  href="/UploadImages"
-                >
-                  <AiOutlinePlus size={27} />
-                </Button>
-                <Nav.Link className="mx-5 nav-item" href="/Userprof">
-                  <BsFillPersonFill size={27} />
-                </Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-        </Container>
+      {/* ==================Buttons/================== */}
+
+      <Container fluid className="my-5 py-3">
+        <Navbar bg="dark" variant="dark" fixed="bottom">
+          <Container>
+            <Nav className="m-auto">
+              <Nav.Link className="mx-5 nav-item" href="/">
+                <RiHome3Fill size={25} />
+              </Nav.Link>
+
+              <Button
+                className="mx-4 nav-item"
+                variant="info"
+                href="/UploadImages"
+              >
+                <AiOutlinePlus size={27} />
+              </Button>
+              <Nav.Link className="mx-5 nav-item" href="/Userprof">
+                <BsFillPersonFill size={27} />
+              </Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+      </Container>
     </div>
   );
 };

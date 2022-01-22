@@ -6,7 +6,7 @@ function Splash() {
   return (
     <div className="position-absolute top-50 start-50 translate-middle ">
       <img
-        src="https://clipart.info/images/minicovers/1516920570Instagram-logo-version-2.png"
+        src="../Image/P4_Logo.png"
         alt="logo"
         className="m-4"
         fluid
