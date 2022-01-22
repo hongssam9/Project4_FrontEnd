@@ -60,15 +60,16 @@ const About = () => {
         <h3 className="mt-5">SoCap Created by</h3>
         <hr />
         <h3>
-          Tad Smith
-          <img
+          Tad Smith 
+        </h3>
+        <img
             src={Tad}
             alt="Tad"
             id="profile"
             className="rounded-circle border border-muted border-3"
             fluid
           />
-        </h3>
+          <br/>
         <Button
           target="_blank"
           href="https://github.com/tadsmyth"
@@ -96,6 +97,7 @@ const About = () => {
         </Button>
         <hr />
         <h3>Xuyen Hoang
+        </h3>
         <img
             src={Xuyen}
             alt="Xuyen"
@@ -103,7 +105,7 @@ const About = () => {
             className="rounded-circle border border-muted border-3"
             fluid
           />
-        </h3>
+          <br/>
         <Button target="_blank" href="" variant="outline-*">
           {" "}
           <BsGithub size={35} className="m-1" />
@@ -119,6 +121,7 @@ const About = () => {
         </Button>
         <hr />
         <h3>Samuel Hong
+        </h3>
         <img
             src={Sam}
             alt="Sam"
@@ -126,7 +129,7 @@ const About = () => {
             className="rounded-circle border border-muted border-3"
             fluid
           />
-        </h3>
+          <br/>
         <Button
           target="_blank"
           href="https://github.com/hongssam9"

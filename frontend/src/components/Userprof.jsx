@@ -31,7 +31,7 @@ const Userprof = () => {
         </Navbar>
       <Container fluid>
         <img
-          class="rounded-circle border border-info border-3"
+          className="rounded-circle border border-info border-3"
           src="https://randomuser.me/api/portraits/men/34.jpg"
           alt="profile pic"
         />
