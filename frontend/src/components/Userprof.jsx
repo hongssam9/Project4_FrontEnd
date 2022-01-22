@@ -3,20 +3,22 @@ import { Container, Row, Col, Navbar, Nav, Button } from "react-bootstrap";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
+import "./Navbar.css"
 
 const Userprof = () => {
   return (
     <div>
-       <Navbar
-          bg="dark"
-          variant="dark"
-          expand="lg"
-          sticky="top"
-          className="mb-5"
-        >
+        <Navbar
+        bg="dark"
+        variant="dark"
+        expand="lg"
+        sticky="top"
+        className="mb-5"
+        id="navbar"
+      >
           <Container fluid>
             <Navbar.Brand className="navbar-logo" href="/">
-              snapp.r social
+              SoCap
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

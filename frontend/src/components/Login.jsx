@@ -3,20 +3,24 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { BsGoogle, BsApple } from "react-icons/bs";
 import { FcGoogle } from 'react-icons/fc'
-
+import logo from './Image/P4_Logo.png'
+import "./Login.css"
 function Login() {
   return (
     <div>
-      {/* <img
-        src="https://clipart.info/images/minicovers/1516920570Instagram-logo-version-2.png"
+     
+      <h1 className = "my-5">SoCap</h1>
+      <img
+        src={logo}
         alt="logo"
-        className="p-5"
+        id="logo"
+        
         fluid
-      ></img> */}
-      <h1>snapp.r social</h1>
+      ></img>
+
       <Form className="p-5">
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Username</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
         </Form.Group>
 

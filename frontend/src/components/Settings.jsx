@@ -14,6 +14,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
+import "./Navbar.css"
 
 const Settings = () => {
   // Might need to use <Col> to create a single veritcal stack of menu items
@@ -26,10 +27,11 @@ const Settings = () => {
         expand="lg"
         sticky="top"
         className="mb-5"
+        id="navbar"
       >
         <Container fluid>
           <Navbar.Brand className="navbar-logo" href="/">
-            snapp.r social
+            SoCap
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -41,7 +43,7 @@ const Settings = () => {
         </Container>
       </Navbar>
       <div className="container-fluid">
-        <h1 className="py-2">Settings</h1>
+        <h1 className="my-4">Settings</h1>
         <div class="d-flex flex-column">
           <Button
             variant="outline-*"
