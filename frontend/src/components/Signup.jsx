@@ -1,35 +1,100 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Form, Col, Row } from "react-bootstrap";
 import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
-import logo from './Image/P4_Logo.png'
-import "./Signup.css"
+import logo from "./Image/P4_Logo.png";
+import "./Signup.css";
 
-const Signup = () => {
+const Signup = ({setErrors}) => {
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+    confirmpwd: "",
+    email: "",
+  });
+  const handleChange = (ev) =>
+    setCredentials({ ...credentials, [ev.target.name]: ev.target.value });
+
+  const options = {
+    headers: { "Content-Type": "application/json" },
+    method: "POST",
+  };
+
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+    fetch(process.env.REACT_APP_API_URL + "api/signup/", {
+      ...options,
+      body: JSON.stringify(credentials),
+    })
+      .then((res) => {
+        const json = res.json();
+        if (res.ok) {
+          setErrors({})
+          return json
+        }
+        else {
+          return json.then((err) => {
+            const errors = { errors: err, status: res.status }
+            setErrors(errors)
+            return errors
+          });
+        }
+      })
+      .then((json) => console.log(json));
+    console.log(credentials);
+  };
+
   return (
     <div>
-    
-      <div className="my-5">
-        <h2>Welcome to</h2>
-        <h1>SoCap</h1>
-      </div>
-      <img
-          src= {logo}
-          alt="logo"
-          id = "logo"
-      
-          fluid
-        />
-      <Form className="p-5">
+      <img className="mt-5" src={logo} alt="logo" id="logo" fluid />
+      <Form className="p-5" action="" onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="formBasicUsername">
+          <Form.Label>Username</Form.Label>
+          <Form.Control
+            onChange={handleChange}
+            type="username"
+            name="username"
+            value={credentials.username}
+            placeholder="Username"
+          />
+        </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicEmail" required>
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control
+            onChange={handleChange}
+            type="email"
+            name="email"
+            value={credentials.email}
+            placeholder="Enter email"
+          />
         </Form.Group>
 
         <Form.Group className="mb-4" controlId="formBasicPassword" required>
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control
+            onChange={handleChange}
+            type="password"
+            name="password"
+            value={credentials.password}
+            placeholder="Password"
+          />
+        </Form.Group>
+
+        <Form.Group
+          className="mb-4"
+          controlId="formBasicPasswordConfirm" /* What's this for???? */
+          required
+        >
+          <Form.Label>Confirm Password</Form.Label>
+          <Form.Control
+            onChange={handleChange}
+            type="password"
+            name="confirmpwd"
+            value={credentials.confirmpwd}
+            placeholder="Password"
+          />
         </Form.Group>
 
         <Col>
