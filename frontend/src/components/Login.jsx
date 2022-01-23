@@ -31,7 +31,8 @@ function Login() {
 
         <Col>
           <Col>
-            <Button variant="outline-primary" type="submit" className = "mb-3">
+          {/* temporarily routed the login button to take to home for demonstration purposes */}
+            <Button variant="outline-primary" type="submit" className = "mb-3" href="/">
               Login
             </Button>
           </Col>
