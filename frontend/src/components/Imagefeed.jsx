@@ -16,7 +16,9 @@ import axios from "axios";
 import { RiHome3Fill } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
-
+import sam from "./Image/Sam.png"
+import tad from "./Image/Tad.png"
+import xuyen from "./Image/Xuyen.png"
 // import * as imageSrc from '../images';
 const ImageFeed = () => {
   const url = "http://shtsxh.herokuapp.com/";
@@ -76,17 +78,29 @@ const ImageFeed = () => {
 
       {/* ==================Images================== */}
       <Carousel variant="light">
-        {Object.keys(Image).length
-          ? Image.map((img) => (
-              <Carousel.Item key={img.id}>
+        
+              <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src={img.image}
+                  src={sam}
                   alt="First post"
                 />
               </Carousel.Item>
-            ))
-          : "no images"}
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={xuyen}
+                  alt="First post"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={tad}
+                  alt="First post"
+                />
+              </Carousel.Item>
+            )
       </Carousel>
 
       <div className="btn-group my-2" role="group" aria-label="Basic example">
