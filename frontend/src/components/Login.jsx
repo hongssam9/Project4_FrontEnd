@@ -5,8 +5,9 @@ import { BsGoogle, BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import logo from "./Image/P4_Logo.png";
 import "./Login.css";
+import { apiLogin } from "../api/api.js";
 
-function Login(setErrors) {
+function Login({ setErrors, setToken}) {
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -14,32 +15,10 @@ function Login(setErrors) {
   const handleChange = (ev) =>
     setCredentials({ ...credentials, [ev.target.name]: ev.target.value });
 
-  const options = {
-    headers: { "Content-Type": "application/json" },
-    method: "POST",
-  };
-
-  const handleSubmit = (ev) => {
+  const handleSubmit = async (ev) => {
     ev.preventDefault();
-    fetch(process.env.REACT_APP_API_URL + "api/token/", {
-      ...options,
-      body: JSON.stringify(credentials),
-    })
-      .then((res) => {
-        const json = res.json();
-        if (res.ok) {
-          setErrors({});
-          return json;
-        } else {
-          return json.then((err) => {
-            const errors = { errors: err, status: res.status };
-            setErrors(errors);
-            return errors;
-          });
-        }
-      })
-      .then((json) => console.log(json));
-    console.log(credentials);
+    const response = await apiLogin("api/token/", credentials);
+    console.log("submit response:",response);
   };
 
   return (

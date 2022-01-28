@@ -21,16 +21,18 @@ import Terms from "./components/Terms";
 
 function App() {
   const [errors, setErrors] = useState({});
-
+  const [images, setImages] = useState([]);
+  const [token, setToken] = useState(null)
+  
   return (
     <div className="App">
       {"errors" in errors ? Object.values(errors.errors).map((error) => <p>{error}</p>) : null}
       <Container>
-        <Route exact path="/" component={ImageFeed} />
-        <Route exact path="/Login" component={Login} setErrors={setErrors}/>
+        <Route exact path="/" component={ImageFeed} images = {images} />
+        <Route exact path="/Login" component={Login} setErrors={setErrors} setToken={setToken}/>
         <Route exact path="/signup" component={Signup} setErrors={setErrors} />
         <Route exact path="/Splash" component={Splash} />
-        <Route exact path="/UploadImages" component={UploadImages} />
+        <Route exact path="/UploadImages" component={UploadImages} setImages={setImages} token = {token}/>
         <Route exact path="/Settings" component={Settings} />
         <Route exact path="/Account" component={Account} />
         <Route exact path="/Userprof" component={Userprof} />
