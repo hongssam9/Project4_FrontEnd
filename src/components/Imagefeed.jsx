@@ -100,7 +100,7 @@ const ImageFeed = () => {
                   alt="First post"
                 />
               </Carousel.Item>
-            )
+            
       </Carousel>
 
       <div className="btn-group my-2" role="group" aria-label="Basic example">
