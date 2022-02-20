@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       {"errors" in errors ? Object.values(errors.errors).map((error) => <p>{error}</p>) : null}
       <Container>
-        <Route exact path="/" component={ImageFeed} images = {images} />
+        <Route path="/" component={ImageFeed} images = {images} />
         <Route exact path="/Login" component={Login} setErrors={setErrors} setToken={setToken}/>
         <Route exact path="/signup" component={Signup} setErrors={setErrors} />
         <Route exact path="/Splash" component={Splash} />
